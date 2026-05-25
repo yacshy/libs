@@ -1,0 +1,37 @@
+{
+  "name": "@yacshy/wait-dom-stable",
+  "version": "0.1.1",
+  "description": "等待 DOM 树稳定后再执行操作，用于准确判断 Vue/React 等单页面应用是否真正渲染完成",
+  "private": false,
+  "main": "dist/index.js",
+  "bin": {
+    "@yacshy/wait-dom-stable": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [
+    "wait-dom-stable",
+    "vue",
+    "react",
+    "SPA",
+    "dom onload"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^1.2.0",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.0",
+    "eslint-plugin-jsonc": "^3.1.2",
+    "eslint-plugin-vue": "^10.9.1",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.3",
+    "rimraf": "^6.1.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4"
+  }
+}

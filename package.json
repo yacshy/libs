@@ -1,0 +1,53 @@
+{
+  "name": "fe-infra",
+  "version": "1.0.0",
+  "private": true,
+  "description": "前端工程化",
+  "main": "index.js",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "main/*",
+    "scripts/*"
+  ],
+  "scripts": {
+    "dev:knowledge-base": "pnpm -F knowledge-base run dev",
+    "dev:management": "pnpm -F management run dev",
+    "dev:server": "pnpm -F server run dev",
+    "dev:extension": "pnpm -F extension run dev",
+    "build:packages": "pnpm -F @yacshy/wait-for-dom-stable run build",
+    "clean": "rimraf --glob packages/*/node_modules && rimraf --glob main/*/node_modules && rimraf --glob scripts/*/node_modules",
+    "prettier:fix": "prettier --write --ignore-path .prettierignore \"./**/*.{js,jsx,ts,tsx,vue,json,jsonc}\"",
+    "eslint:fix": "eslint . --fix",
+    "stylelint:fix": "stylelint \"./**/*.(vue|scss|css)\" --fix",
+    "lint:fix": "eslint . --fix && stylelint \"./**/*.(vue|scss|css)\" --fix && prettier --write --ignore-path .prettierignore \"./**/*.{js,jsx,ts,tsx,vue,json,jsonc}\""
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.2",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^1.2.0",
+    "eslint": "^10.1.0",
+    "eslint-plugin-jsonc": "^3.1.2",
+    "eslint-plugin-vue": "^10.9.0",
+    "globals": "^17.4.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "jsonc-eslint-parser": "^3.1.0",
+    "prettier": "^3.8.1",
+    "rimraf": "^6.1.3",
+    "stylelint": "^17.6.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^8.1.1",
+    "tsc": "^2.0.4",
+    "tsx": "^4.21.0",
+    "typescript": "5.8.3",
+    "typescript-eslint": "^8.58.0",
+    "vite": "^8.0.3",
+    "yarn": "^1.22.22"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

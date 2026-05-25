@@ -1,0 +1,14 @@
+packages:
+  - "packages/*"
+  - "main/*"
+  - "scripts/*"
+allowBuilds:
+  '@nestjs/core': true
+  "@parcel/watcher": true
+  core-js: true
+  core-js-pure: true
+  esbuild: true
+  protobufjs: true
+  spawn-sync: true
+  unrs-resolver: true
+  yarn: true
