@@ -5,11 +5,7 @@
   "description": "前端工程化",
   "main": "index.js",
   "type": "module",
-  "workspaces": [
-    "packages/*",
-    "main/*",
-    "scripts/*"
-  ],
+  "workspaces": ["packages/*", "main/*", "scripts/*"],
   "scripts": {
     "dev:knowledge-base": "pnpm -F knowledge-base run dev",
     "dev:management": "pnpm -F management run dev",
@@ -17,13 +13,13 @@
     "dev:extension": "pnpm -F extension run dev",
     "build:packages": "pnpm -F @yacshy/wait-for-dom-stable run build",
     "clean": "rimraf --glob packages/*/node_modules && rimraf --glob main/*/node_modules && rimraf --glob scripts/*/node_modules",
-    "prettier:fix": "prettier --write --ignore-path .prettierignore \"./**/*.{js,jsx,ts,tsx,vue,json,jsonc}\"",
-    "eslint:fix": "eslint . --fix",
+    "biome:fix": "pnpx @biomejs/biome format --write",
     "stylelint:fix": "stylelint \"./**/*.(vue|scss|css)\" --fix",
-    "lint:fix": "eslint . --fix && stylelint \"./**/*.(vue|scss|css)\" --fix && prettier --write --ignore-path .prettierignore \"./**/*.{js,jsx,ts,tsx,vue,json,jsonc}\""
+    "lint:fix": "pnpx @biomejs/biome format --write && stylelint \"./**/*.(vue|scss|css)\" --fix"
   },
   "license": "ISC",
   "devDependencies": {
+    "@biomejs/biome": "^2.4.16",
     "@commitlint/cli": "^20.5.2",
     "@commitlint/config-conventional": "^20.5.0",
     "@eslint/js": "^10.0.1",

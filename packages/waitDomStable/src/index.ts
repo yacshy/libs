@@ -11,7 +11,7 @@ export const waitDomStable = (
   timeout: number = 10000
 ): Promise<void> => {
   return new Promise((resolve, reject) => {
-    let timer!: number;
+    let timer!: NodeJS.Timeout;
     let observer: MutationObserver | null = null;
 
     // 设置一个总超时，避免因为页面持续高频更新而永远等待
